@@ -1,13 +1,17 @@
 // Using bind(this);
 
-// function Person() {
-//     this.age = 0;
+function Person() {
+    this.age = 0;
 
-//     setInterval(function() {
-//         this.age++;
-//         console.log(this.age);
-//     }.bind(this),1000)
-// }
+    setInterval(
+        function () {
+            this.age++;
+            console.log(this.age);
+        }.bind(this) // parameter pertama
+        , 1000) // 1000ms parameter kedua
+}
+
+setInterval();
 
 // const p = new Person()
 
@@ -30,7 +34,7 @@ function Person() {
     setInterval(() => {
         this.age++;
         console.log(this.age);
-    },1000)
+    }, 1000)
 }
 
 
